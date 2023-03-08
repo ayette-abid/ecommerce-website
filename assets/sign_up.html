@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/index.css">
+  </head>
+  <body>
+    <nav>
+        <input type="checkbox" id="nav-toggle">
+        <div class="logo">ANI<strong>MERCH</strong></div>
+       <ul class="links">
+           <li><a href="../index.html">Home</a></li>
+           <li><a href="../assets/About us.html">About Us</a></li>
+           <li><a href="../assets/contact_us.html">Contact Us</a></li>
+           <li><a style="cursor: pointer;" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</a></li>
+           <li><img src="../img/panier.png" alt="panier"></li> 
+       </ul>
+       <label for="nav-toggle" class="icon-burger">
+           <div class="line"></div>
+           <div class="line"></div>
+           <div class="line"></div>
+       </label>
+    </nav>
+    <form action="sign_up.php" onsubmit="return validationInscription(document.signup.rpass,document.signup.pass)" method="post" name="signup">
+      <div class="pop_container">
+        <center>
+        <h1>Sign Up</h1>
+        </center>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        
+        <label for="name"><b>Name:</b></label>
+        <input type="text" placeholder="Name" name="name" required>
+
+        <label for="surname"><b>Surname:</b></label>
+        <input type="text" placeholder="Surname" name="surname" required>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="username" name="username" required>
+
+        <label id="email" for="email"><b>Email</b></label>
+        <input type="text" placeholder="Email" name="email" required>
+  
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Password" name="pass" required>
+  
+        <label for="repeatpassword"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="rpass" required>
+        
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label></form>
+  
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" style="font-family: 'Teko', sans-serif;font-size: 22px;" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn" style="font-family: 'Teko', sans-serif;font-size: 22px;background-color: #777;">Sign Up</button>
+        </div>
+      </div>
+    </form>
+    <script src="../javascript/signup.js"></script>
+  </body>
+</html>
